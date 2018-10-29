@@ -1,13 +1,14 @@
 # Template build file for 'desktop-file-utils'.
 pkgname=desktop-file-utils
-version=0.23
-revision=2
+version=0.23.1
+revision=1
 build_style=gnu-configure
-hostmakedepends="pkg-config"
+configure_script="./autogen.sh"
+hostmakedepends="pkg-config autoconf automake"
 makedepends="libglib-devel"
 short_desc="Utilities to manage desktop entries"
-maintainer="Juan RP <xtraeme@voidlinux.eu>"
+maintainer="kh4ydn <khaydn@tuta.io>"
 license="GPL-2"
 homepage="http://www.freedesktop.org/wiki/Software/desktop-file-utils"
-distfiles="${FREEDESKTOP_SITE}/$pkgname/releases/$pkgname-$version.tar.xz"
-checksum=6c094031bdec46c9f621708f919084e1cb5294e2c5b1e4c883b3e70cb8903385
+distfiles="https://github.com/kh4ydn/desktop-file-utils/archive/${version}.tar.gz"
+checksum=271e0e26cd62073fd4767b0235d2fcafdb49bb281d5843cf6da85ff0bdb905a7
